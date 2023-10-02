@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Contact Me</title>
+   <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+   <%- include ('partials/navbar') %>
+
+   <div class="content-container">
+       <h1>Contact Me</h1>
+
+       <!-- Contact Information Panel -->
+       <div class="contact-panel">
+          <h2>Contact Information</h2>
+          <p><strong>Email:</strong> mahdi7820021@gmail.com</p>
+          <p><strong>Phone:</strong> 437-436-7784</p>
+          <p><strong>Address:</strong> 50 Amiens Rd, Toronto, ON</p>
+       </div>
+
+       <!-- Interactive Form -->
+       <div class="form-container">
+           <h2>Send Me a Message</h2>
+           <form action="/submit-contact" method="POST">
+               <label for="firstName">First Name</label>
+               <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+               
+               <label for="lastName">Last Name</label>
+               <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+               
+               <label for="contactNumber">Contact Number</label>
+               <input type="text" name="contactNumber" id="contactNumber" placeholder="Contact Number" required>
+               
+               <label for="emailAddress">Email Address</label>
+               <input type="email" name="emailAddress" id="emailAddress" placeholder="Email Address" required>
+               
+               <label for="message">Message</label>
+               <textarea name="message" id="message" placeholder="Your Message Here" required></textarea>
+               
+               <input type="submit" class="cta-button" value="Send Message">
+           </form>
+       </div>
+   </div>
+
+   <%- include ('partials/footer') %>
+</body>
+</html>
